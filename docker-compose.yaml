@@ -45,7 +45,7 @@ services:
             - backend
         environment:
             - BACKEND=postgresql://${DB_USER}:${DB_PW}@db:${DB_PORT}/${DB_NAME}
-            - ARTIFACTS=gs://mlflow
+            - ARTIFACTS=gs://enoik-mlflow/mlflow-app
           # For artifact store in AWS S3 (note boto was installed in container):
           #  - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
           #  - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
