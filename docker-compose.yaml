@@ -52,7 +52,6 @@ services:
           #  - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
           #  - AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION}
           #  - ARTIFACTS="s3://mlflow_bucket/mlflow/"
-          #  - ARTIFACTS="/mlflow"
         volumes:
             - mlrun_data:/mlruns
             - condenv:/opt/conda

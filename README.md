@@ -46,6 +46,8 @@ export DB_NAME=mlflowdb
 export DB_PORT=5432
 export DB_USER=postgres
 export DB_PW=<somepassword>        # (choose an actual pw)
+export MLFLOW_ARTIFACTS=<gs://...>
+
 ```
 A minor gotcha to note: this `<somepassword>` is expected to have no spaces
 in it, not due to the database used but due to the way I pass it from this
@@ -61,9 +63,9 @@ beyond that.
 
 Anyhow, start the containers with:
 ```bash
-docker-compose up -d --build 
+docker-compose up -d --build  --no-cache
 ```
-(`-d` for detached mode, `--build` to build the underlying containers if needed)
+(`-d` for detached mode, `--build` to build the underlying containers if needed `--no-cache` if the rebuild is needed)
 The first time will download/build the containers, but after that it will
 start back up the existing containers and volumes, as can be seen via
 ```bash
