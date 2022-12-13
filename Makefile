@@ -2,13 +2,15 @@
 # Warning: note make clean will empty out your mlflow contents completely.
 
 # MLGWHOST variable is host for accessing mlflow from inside docker container.
-MLGWHOST=$(shell docker inspect -f '{{ .NetworkSettings.Networks.docker_mlflow_db_frontend.Gateway }}' mlflow_server)
+# sudo ip addr show docker0 
+# https://stackoverflow.com/questions/24319662/from-inside-of-a-docker-container-how-do-i-connect-to-the-localhost-of-the-mach
+MLGWHOST=$(docker inspect -f '{{ .NetworkSettings.Networks.docker_mlflow_db_frontend.Gateway }}' mlflow_server)
 # Localhost is used to access mlflow outside the docker container.
 MLFLOW_PORT=5000
 
 ALPHA = 0.002 0.02 0.2 2.0 20.0 200.0
 L1RATIO = 0.1 0.2
-EXPT = 'Testing2'
+EXPT = 'Testing6'
 
 mlflowpopulate:
 	# Populates entries in mlflow with the mlflow team's own mlflow-example.
