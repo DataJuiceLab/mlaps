@@ -1,4 +1,4 @@
-# docker_mlflow_db
+# mlaps
 A docker-compose setup to quickly provide MlFlow service with database backend
 and a reverse proxy frontend which can optionally allow for basic authentication.
 
@@ -6,6 +6,7 @@ and a reverse proxy frontend which can optionally allow for basic authentication
 Originally based on [Guillaume Androz's 10-Jan-2020 Toward-Data-Science post,
 "Deploy MLflow with docker compose"]
 (https://towardsdatascience.com/deploy-mlflow-with-docker-compose-8059f16b6039),
+and forked from [agense repo](https://github.com/aganse/docker_mlflow_db),
 with some changes to:
 * replace AWS usage with GCP mapping for artifact store
 * replace mysql with postgresql and other options.
