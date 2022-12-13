@@ -7,7 +7,7 @@ Originally based on [Guillaume Androz's 10-Jan-2020 Toward-Data-Science post,
 "Deploy MLflow with docker compose"]
 (https://towardsdatascience.com/deploy-mlflow-with-docker-compose-8059f16b6039),
 with some changes to:
-* replace AWS usage with local mapping for artifact store
+* replace AWS usage with GCP mapping for artifact store
 * replace mysql with postgresql and other options.
 * optionally apply htpasswd access control to mlflow website via nginx frontend
 
