@@ -7,4 +7,4 @@ RUN conda install google-cloud-storage
 # comment out google-cloud-storage if not using Google
 
 
-RUN cd /home && git clone https://github.com/mlflow/mlflow-example.git
+RUN cd /home && git clone https://github.com/DataJuiceLab/mlflow-example.git
