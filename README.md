@@ -14,15 +14,6 @@ with some changes to:
 and overall allowing me to quickly clone to wherever I'm working whereas the
 original was just a web article.
 
-There are several docker-compose.yaml files in the compose_variations
-subdirectory, any of which can be in lieu of the docker-compose.yaml in the
-root directory to use the desired variation.  The docker-compose.yaml file is
-a copy of compose_variations/docker-compose.mlflow_postgres_nginx.yaml.  Only
-this docker-compose.yaml is necessarily fully up-to-date and tested, but
-brief comparisons with the other files should make pretty clear what to update
-if necessary.
-
-
 Future To-dos:
 * Add check for whether the env vars are set in shell (or .env file)
 before kicking off container - this ia a mistake I regularly make myself.
